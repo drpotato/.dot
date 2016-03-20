@@ -1,4 +1,4 @@
-let g:spf13_bundle_groups=['general', 'programming', 'ruby', 'python', 'go', 'javascript', 'html', 'misc', 'writing', 'elixir']
+let g:spf13_bundle_groups=['general', 'programming', 'python', 'go', 'javascript', 'html', 'misc', 'writing', 'elixir']
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 nnoremap <C-J> m`o<Esc>``
 nnoremap <C-K> m`O<Esc>``

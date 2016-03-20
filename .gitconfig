@@ -1,23 +1,20 @@
 [core]
-	excludesfile = /Users/chris/.gitignore_global
-	editor = vim
+    excludesfile = /Users/chris/.gitignore_global
+    editor = vim
 [user]
-	email = chris.j.r.morgan@gmail.com
-	name = Chris Morgan
+    email = chris.j.r.morgan@gmail.com
+    name = Chris Morgan
 [push]
-	default = simple
+    default = simple
 [pull]
-	default = simple
+    default = simple
 [alias]
-	fuck = reset --hard HEAD
-	plog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-	tree = forest --pretty=format:\"%C(red)%h %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=15
-[credential]
-    helper = osxkeychain
+    fuck = reset --hard HEAD
+    plog = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    tree = forest --pretty=format:\"%C(red)%h %C(magenta)(%ar) %C(blue)%an %C(reset)%s\" --style=15
 [merge]
     tool = vimdiff
     conflictstyle = diff3
     prompt = false
-
 [mergetool "vimdiff"]
     keepBackup = false
