@@ -3,7 +3,6 @@
 sxhkd &
 
 bspc config top_padding 14 
-
 bspc config border_width         2
 bspc config window_gap          12
 
@@ -19,5 +18,5 @@ bspc rule -a Steam follow=off desktop=II
 bspc rule -a Spotify desktop=II
 bspc rule -a "Battle.net" floating=true center=true desktop=III
 
-/home/chris/.fehbg &
-/home/chris/.config/bspwm/panel/panel &
+~/.fehbg &
+~/.config/bspwm/panel/panel &
