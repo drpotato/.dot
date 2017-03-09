@@ -1,0 +1,12 @@
+# general
+
+# padding
+kwmc config padding 35 10 10 10
+
+# borders
+kwmc config border focused on
+kwmc config border focused size 2
+kwmc config border focused color 0xFFF4F5F7
+kwmc config border focused radius 6
+
+

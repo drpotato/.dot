@@ -1,0 +1,71 @@
+# kwm compatibility
+khd kwm on
+
+# modes
+khd mode default color 0xFFF4F5F7
+khd mode switch color 0xFFFFC400
+khd mode swap color 0xFF2684FF
+khd mode modify color 0xFFFF7452
+
+lctrl	- f			:	khd -e "mode activate switch"
+switch	- f			:	khd -e "mode activate swap"
+swap	- f			:	khd -e "mode activate modify"
+modify	- f			:	khd -e "mode activate switch"
+
+switch	- d			:	khd -e "mode activate default"
+swap	- d			:	khd -e "mode activate default"
+modify	- d			:	khd -e "mode activate default"
+
+# global
+## restart khd
+lshift	+ lctrl	- r		:	khd -e "reload" && alerter -title khd -message "reloaded config" -timeout 1
+
+## start/stop kwm
+lshift	+ lctrl	- q		:	brew services stop kwm && alerter -title khd -message "stopped kwm" -timeout 1
+lshift	+ lctrl	- s		:	brew services restart kwm && alerter -title khd -message "started kwm" -timeout 1
+
+## applications
+lcmd	+ lctrl - return	:	open -na /Applications/Hyper.app
+
+lcmd 	+ lctrl - t		:	kwmc window split-mode toggle
+
+# switch
+## focus
+switch	- h			:	kwmc window -f west
+switch	- l			:	kwmc window -f east
+switch	- j			:	kwmc window -f south
+switch	- k			:	kwmc window -f north
+
+## space
+switch	- 1			:	kwmc space -fExperimental 1
+switch	- 2			:	kwmc space -fExperimental 2
+switch	- 3			:	kwmc space -fExperimental 3
+switch	- 4			:	kwmc space -fExperimental 4
+switch	- 5			:	kwmc space -fExperimental 5
+switch	- 6			:	kwmc space -fExperimental 6
+switch	- 7			:	kwmc space -fExperimental 7
+switch	- 8			:	kwmc space -fExperimental 8
+switch	- 9			:	kwmc space -fExperimental 9
+
+# swap
+## windows
+swap	- h			:	kwmc window -s west
+swap	- l			:	kwmc window -s east
+swap	- j			:	kwmc window -s south
+swap	- k			:	kwmc window -s north
+
+## rotate
+swap	- r			:	kwmc tree rotate 90
+
+## move
+swap	+ shift	- h		:	kwmc window -m west
+swap	+ shift	- j		:	kwmc window -m south
+swap	+ shift	- k		:	kwmc window -m north
+swap	+ shift	- l		:	kwmc window -m east
+
+# modify
+## grow
+modify	- h			:	kwmc window -c expand 0.05 west && kwmc window -c reduce 0.05 east
+modify	- j			:	kwmc window -c expand 0.05 south && kwmc window -c reduce 0.05 north
+modify	- k			:	kwmc window -c expand 0.05 north && kwmc window -c reduce 0.05 south
+modify	- l			:	kwmc window -c expand 0.05 east && kwmc window -c reduce 0.05 west
